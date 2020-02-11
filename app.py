@@ -5,6 +5,8 @@ app = Flask(__name__)
 
 ENV = 'dev'
 
+import os
+
 if ENV == 'dev':
   app.debug = True
   app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI')
