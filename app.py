@@ -3,6 +3,17 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
+ENV = 'dev'
+
+if ENV == 'dev':
+  app.debug = True
+  app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI')
+else:
+  app.debug = False
+  app.config['SQLALCHEMY_DATABASE_URI'] = ''
+
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+  
 # Route that handles GET requests to the '/' endpoint
 @app.route('/')
 def index():
@@ -21,5 +32,4 @@ def submit():
 
 
 if __name__ == '__main__':
-  app.debug = True
   app.run()
