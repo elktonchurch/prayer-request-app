@@ -12,7 +12,9 @@ def submit():
     user = request.form['user']
     typeOfRequest = request.form['typeOfRequest']
     prayerRequest = request.form['prayerRequest']
-    print(user, typeOfRequest, prayerRequest)
+    # print(user, typeOfRequest, prayerRequest)
+    if user == '' or typeOfRequest == '':
+      return render_template('index.html', message='Please enter info into the required fields')
     return render_template('success.html')
 
 
