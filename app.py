@@ -13,8 +13,8 @@ def submit():
     typeOfRequest = request.form['typeOfRequest']
     prayerRequest = request.form['prayerRequest']
     # print(user, typeOfRequest, prayerRequest)
-    if user == '' or typeOfRequest == '':
-      return render_template('index.html', message='Please enter info into the required fields')
+    if user == '' or typeOfRequest == '' or prayerRequest == '':
+      return render_template('index.html', message='Please fill in all of the required fields, which are denoted by an " * " (asterisk)')
     return render_template('success.html')
 
 
