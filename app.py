@@ -15,6 +15,19 @@ else:
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
+
+class PrayerRequest(db.Model):
+  __tablename__ = 'prayerRequest'
+  id = db.Column(db.Integer, primary_key=True)
+  user = db.Column(db.String(200), unique=True)
+  typeOfRequest = db.Column(db.String(200))
+  prayerRequest = db.Column(db.Text())
+  
+  def __init__(self, user, typeOfRequest, prayerRequest):
+    self.user = user
+    self.typeOfRequest = typeOfRequest
+    self.prayerRequest = prayerRequest
+    
   
 # Route that handles GET requests to the '/' endpoint
 @app.route('/')
