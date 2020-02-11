@@ -1,4 +1,4 @@
-from flask import Flask, render_template, pip._vendor.requests
+from flask import Flask, render_template, requests
 
 app = Flask(__name__)
 
