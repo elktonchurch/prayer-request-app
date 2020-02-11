@@ -7,7 +7,7 @@
 		<title>EMC Prayer Request Form</title>
 	</head>
 	<body>
-		<div>
+		<div class="container">
 			<img src="../static/emc_logo.png" alt="EMC logo" class="logo" />
 			<!-- @todo - message -->
 			<form action="/submit" method="POST">
@@ -35,14 +35,14 @@
 						>
 						<option value="Grieving">Grieving</option>
 					</select>
-					<div class="form">
+					<div class="form-group">
 						<h3>How can we pray for you?</h3>
 						<!-- "request" = "comments" -->
 						<textarea
 							name="request"
 							id=""
 							cols="30"
-							rows="10"
+							rows="7"
 							placeholder="Enter details of your prayer request here"
 						></textarea>
 					</div>
