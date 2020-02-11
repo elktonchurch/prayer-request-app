@@ -13,6 +13,8 @@ else:
   app.config['SQLALCHEMY_DATABASE_URI'] = ''
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
   
 # Route that handles GET requests to the '/' endpoint
 @app.route('/')
