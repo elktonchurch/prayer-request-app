@@ -53,7 +53,8 @@ def submit():
       db.session.add(data)
       db.session.commit()
       return render_template('success.html')
-    return render_template('index.html', message='Thank you, but you have already submitted a prayer request')
+    # Prevents duplicate prayer request form submissions from the same user
+    # return render_template('index.html', message='Thank you, but you have already submitted a prayer request')
 
 if __name__ == '__main__':
   app.run()
