@@ -52,7 +52,7 @@ def submit():
       data = PrayerRequest(user, typeOfRequest, prayerRequest)
       db.session.add(data)
       db.session.commit()
-      return render_template('success.html')
+    return render_template('success.html')
     # Prevents duplicate prayer request form submissions from the same user
     # return render_template('index.html', message='Thank you, but you have already submitted a prayer request')
 
