@@ -54,6 +54,7 @@ def submit():
 	data = PrayerRequest(user, typeOfRequest, prayerRequest)
 	db.session.add(data)
 	db.session.commit()
+	send_mail(user, typeOfRequest, prayerRequest)
 	return render_template('success.html')
 	# Renders home page; displays message stating that this user has already submitted
 	# return render_template('index.html', message='Thank you, but you have already submitted a prayer request')
