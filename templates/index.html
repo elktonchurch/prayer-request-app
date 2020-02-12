@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../static/style.css" />
+		<title>EMC Prayer Request Form</title>
+	</head>
+	<body>
+		<div class="container">
+			<img src="../static/emc_logo.png" alt="EMC logo" class="logo" />
+			{% if message %}
+			<p class="message">{{ message | safe }}</p>
+			{% endif %}
+			<form action="/submit" method="POST">
+				<div class="form-group">
+					<h3>Your Name*</h3>
+					<input type="text" name="user" placeholder="Enter your name here" />
+				</div>
+				<div class="form-group">
+					<h3>Your Prayer Request Type*</h3>
+					<select name="typeOfRequest">
+						<option value="">Select Your Prayer Request Type</option>
+						<option value="Guidance & Wisdom">Guidance & Wisdom</option>
+						<option value="Love, Peace, & Joy">Love, Peace, & Joy</option>
+						<option value="Finances, Jobs, & Exams"
+							>Finances, Jobs, & Exams</option
+						>
+						<option value="Personal Health">Personal Health</option>
+						<option value="Salvation of Others">Salvation of Others</option>
+						<option value="Family Issues">Family Issues</option>
+						<option value="Protection">Protection</option>
+						<option value="Widows, the Homeless, & the Hungry"
+							>Widows, the Homeless, & the Hungry</option
+						>
+						<option value="Grieving">Grieving</option>
+					</select>
+					<div class="form-group">
+						<h3>How can we pray for you?*</h3>
+						<textarea
+							name="prayerRequest"
+							id=""
+							cols="30"
+							rows="7"
+							placeholder="Enter details of your prayer request here"
+						></textarea>
+					</div>
+					<input type="submit" value="Submit" class="btn" />
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
