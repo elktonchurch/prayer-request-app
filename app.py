@@ -48,12 +48,13 @@ def submit():
     prayerRequest = request.form['prayerRequest']
     if user == '' or typeOfRequest == '' or prayerRequest == '':
       return render_template('index.html', message='Please fill in all of the required fields, which are denoted by an " * " (asterisk)')
+    # Prevents duplicate prayer request form submissions from the same user 
     # if db.session.query(PrayerRequest).filter(PrayerRequest.user == user).count() == 0:
     data = PrayerRequest(user, typeOfRequest, prayerRequest)
     db.session.add(data)
     db.session.commit()
     return render_template('success.html')
-    # Prevents duplicate prayer request form submissions from the same user
+    # Renders home page; displays message stating that this user has already submitted
     # return render_template('index.html', message='Thank you, but you have already submitted a prayer request')
 
 if __name__ == '__main__':
