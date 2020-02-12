@@ -1,3 +1,5 @@
 {
-  "python.pythonPath": "/Users/ticothep/.local/share/virtualenvs/prayer-request-app-GFLheC_3/bin/python"
+  "python.pythonPath": "/Users/ticothep/.local/share/virtualenvs/prayer-request-app-GFLheC_3/bin/python",
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": true
 }
