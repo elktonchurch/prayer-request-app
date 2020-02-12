@@ -24,7 +24,7 @@ db = SQLAlchemy(app)
 class PrayerRequest(db.Model):
   __tablename__ = 'prayerRequest'
   id = db.Column(db.Integer, primary_key=True)
-  user = db.Column(db.String(200), unique=True)
+  user = db.Column(db.String(200))
   typeOfRequest = db.Column(db.String(200))
   prayerRequest = db.Column(db.Text())
   
@@ -48,10 +48,10 @@ def submit():
     prayerRequest = request.form['prayerRequest']
     if user == '' or typeOfRequest == '' or prayerRequest == '':
       return render_template('index.html', message='Please fill in all of the required fields, which are denoted by an " * " (asterisk)')
-    if db.session.query(PrayerRequest).filter(PrayerRequest.user == user).count() == 0:
-      data = PrayerRequest(user, typeOfRequest, prayerRequest)
-      db.session.add(data)
-      db.session.commit()
+    # if db.session.query(PrayerRequest).filter(PrayerRequest.user == user).count() == 0:
+    data = PrayerRequest(user, typeOfRequest, prayerRequest)
+    db.session.add(data)
+    db.session.commit()
     return render_template('success.html')
     # Prevents duplicate prayer request form submissions from the same user
     # return render_template('index.html', message='Thank you, but you have already submitted a prayer request')
