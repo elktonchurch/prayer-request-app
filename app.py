@@ -10,7 +10,7 @@ HEROKU_POSTGRES_DB_URI = os.environ.get('HEROKU_POSTGRES_DB_URI')
 
 app = Flask(__name__)
 
-ENV = 'dev'
+ENV = 'prod'
 
 if ENV == 'dev':
 	app.debug = True
