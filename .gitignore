@@ -131,3 +131,4 @@ dmypy.json
 # openssl server pass key
 server.pass.key
 server.key
+server.csr
