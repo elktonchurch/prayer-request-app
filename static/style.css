@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-	max-width: 80%;
+	max-width: 90%;
 	margin: 1.5rem auto;
 	overflow: auto;
 	padding: 0 2rem;
@@ -39,7 +39,7 @@ img {
 }
 
 .logo {
-	width: 300px;
+	width: 25%;
 	display: block;
 	margin: auto;
 }
@@ -71,13 +71,20 @@ textarea {
 	margin-top: 1rem;
 }
 
-/* Use a media query to add a breakpoint at 800px: */
+/* Screen widths >800px: */
 @media screen and (min-width: 800px) {
 	.container {
-		max-width: 650px;
+		max-width: 60%;
 	}
 
 	.btn {
 		font-size: 1.2rem;
+	}
+}
+
+/* Screen widths >1200px: */
+@media screen and (min-width: 1200px) {
+	.container {
+		max-width: 50%;
 	}
 }
