@@ -6,17 +6,18 @@ from dotenv import load_dotenv
 load_dotenv()
 
 SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI')
+HEROKU_POSTGRES_DB_URI = os.environ.get('HEROKU_POSTGRES_DB_URI')
 
 app = Flask(__name__)
 
-ENV = 'dev'
+ENV = 'prod'
 
 if ENV == 'dev':
 	app.debug = True
 	app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
 else:
 	app.debug = False
-	app.config['SQLALCHEMY_DATABASE_URI'] = ''
+	app.config['SQLALCHEMY_DATABASE_URI'] = HEROKU_POSTGRES_DB_URI
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
