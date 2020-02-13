@@ -60,6 +60,7 @@ textarea {
 
 .btn {
 	display: block;
+	font-size: 1.5rem;
 	width: 100%;
 	background: #333;
 	color: #fff;
@@ -74,5 +75,9 @@ textarea {
 @media screen and (min-width: 800px) {
 	.container {
 		max-width: 650px;
+	}
+
+	.btn {
+		font-size: 1.2rem;
 	}
 }
