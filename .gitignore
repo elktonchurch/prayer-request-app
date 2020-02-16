@@ -135,7 +135,8 @@ server.csr
 server.crt
 
 # private keys generated for elkton.church
-elkton.church.key
-elkton.church.pass.key
-elkton.church.csr
-elkton.church.crt
+www_elkton_church.key
+www_elkton_church.pass.key
+www_elkton_church.csr
+www_elkton_church.crt
+www_elkton_church.ca-bundle
