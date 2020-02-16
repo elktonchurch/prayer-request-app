@@ -128,8 +128,14 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# openssl server pass key
+# openssl .csr, .crt, .key
 server.pass.key
 server.key
 server.csr
 server.crt
+
+# private keys generated for elkton.church
+elkton.church.key
+elkton.church.pass.key
+elkton.church.csr
+elkton.church.crt
