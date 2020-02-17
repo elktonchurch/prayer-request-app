@@ -12,6 +12,7 @@ flask-sqlalchemy = "*"
 psycopg2-binary = "*"
 gunicorn = "*"
 python-dotenv = "*"
+flask-cors = "*"
 
 [requires]
 python_version = "3.8"
