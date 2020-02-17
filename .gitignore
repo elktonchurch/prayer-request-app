@@ -141,3 +141,7 @@ www_elkton_church.pass.key
 www_elkton_church.csr
 www_elkton_church.crt
 www_elkton_church.ca-bundle
+
+# VScode settings
+.vscode/
+settings.json
