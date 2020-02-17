@@ -133,6 +133,7 @@ server.pass.key
 server.key
 server.csr
 server.crt
+server.ca-bundle
 
 # private keys generated for elkton.church
 www_elkton_church.key
