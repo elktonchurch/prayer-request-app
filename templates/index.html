@@ -15,19 +15,19 @@
 			{% endif %}
 			<form action="/submit" method="POST">
 				<div class="form-group">
-					<label for="yourNameH3">
-						<h3 id="yourNameH3">Your Name*</h3>
+					<label for="firstAndLastName">
+						<h3 id="firstAndLastName">First & Last Name (*required field)</h3>
 					</label>
 					<label>
-						<input type="text" name="user" placeholder="Enter your name here" />
+						<input type="text" name="user" placeholder="i.e. Reginald Courliss" />
 					</label>
 				</div>
 				<div class="form-group">
-					<label for="requestTypeH3">
-						<h3 id="requestTypeH3">Your Prayer Request Type*</h3>
+					<label for="requestType">
+						<h3 id="requestType">Prayer Request Type (*required field)</h3>
 					</label>
 					<select name="typeOfRequest">
-						<option value="">Select Your Prayer Request Type</option>
+						<option value="">Please select the type of your prayer request</option>
 						<option value="Guidance & Wisdom">Guidance & Wisdom</option>
 						<option value="Love, Peace, & Joy">Love, Peace, & Joy</option>
 						<option value="Finances, Jobs, & Exams"
@@ -43,8 +43,8 @@
 						<option value="Grieving">Grieving</option>
 					</select>
 					<div class="form-group">
-						<label for="howCanWePrayH3">
-							<h3 id="howCanWePrayH3">How can we pray for you?*</h3>
+						<label for="howCanWePray">
+							<h3 id="howCanWePray">Prayer Request (*required field)</h3>
 						</label>
 						<label for="prayerRequestTextArea">
 							<textarea
@@ -52,7 +52,7 @@
 								id="prayerRequestTextArea"
 								cols="30"
 								rows="8"
-								placeholder="Enter details of your prayer request here"
+							placeholder="Please enter the details of your prayer request here"
 							></textarea>
 						</label>
 					</div>
