@@ -31,7 +31,7 @@ body {
 }
 
 .success_div {
-	max-width: 75%;
+	max-width: 90%;
 	padding: 0.5rem;
 	text-align: center;
 }
@@ -97,7 +97,7 @@ textarea {
 /* Screen widths >800px: */
 @media screen and (min-width: 800px) {
 	.container {
-		max-width: 60%;
+		max-width: 80%;
 	}
 
 	h3 {
@@ -112,6 +112,6 @@ textarea {
 /* Screen widths >1200px: */
 @media screen and (min-width: 1200px) {
 	.container {
-		max-width: 50%;
+		max-width: 70%;
 	}
 }
