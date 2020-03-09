@@ -9,7 +9,10 @@
 	</head>
 	<body>
 		<div class="container">
-			<img src="../static/emc_logo.png" alt="EMC logo" class="logo" />
+			<div class="logo_h1_container">
+				<img src="../static/emc_logo.png" alt="EMC logo" class="logo" />
+				<h1 class="form_h1">Prayer Request Form</h1>
+			</div>
 			{% if message %}
 			<p class="message">{{ message | safe }}</p>
 			{% endif %}
