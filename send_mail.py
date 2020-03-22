@@ -40,6 +40,7 @@ def send_mail(user, typeOfRequest, prayerRequest):
     # Church staff that will receive prayer request notifications
     recipients = [PASTOR_REGGIE_EMAIL, TICO2_GMAIL_EMAIL, DON_FAUPEL_EMAIL, CASEY_TURNER_EMAIL, MIKE_VIERS_EMAIL, SUE_COURLISS_EMAIL, MELISSA_HELMUTH_EMAIL, KIM_KARL_EMAIL, KELLEE_ROTH_EMAIL, PATTY_EVANS_EMAIL, JEN_VIERS_EMAIL]
     
+    
     msg = MIMEText(message, 'html')
     msg['Subject'] = 'New EMC Prayer Request'
     msg['From'] = sender
