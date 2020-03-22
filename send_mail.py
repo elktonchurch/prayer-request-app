@@ -7,20 +7,21 @@ load_dotenv()
 ELKTON_DOT_CHURCH_GMAIL_USERNAME = os.environ.get('ELKTON_DOT_CHURCH_GMAIL_USERNAME')
 ELKTON_DOT_CHURCH_GMAIL_PASSWORD = os.environ.get('ELKTON_DOT_CHURCH_GMAIL_PASSWORD')
 TICO_GMAIL_EMAIL = os.environ.get('TICO_GMAIL_EMAIL')
+TICO2_GMAIL_EMAIL = os.environ.get('TICO2_GMAIL_EMAIL')
 
 def send_mail(user, typeOfRequest, prayerRequest):
     port = 587
     smtp_server = 'smtp.gmail.com'
     login = ELKTON_DOT_CHURCH_GMAIL_USERNAME
     password = ELKTON_DOT_CHURCH_GMAIL_PASSWORD
-    message = f"<ul><li>User: {user}</li>\n<li>Type of Prayer Request: {typeOfRequest}</li>\n<li>Prayer Request: {prayerRequest}</li></ul>"
+    message = f"<ul><li>User: {user}</li><li>Type of Prayer Request: {typeOfRequest}</li><li>Prayer Request: {prayerRequest}</li></ul>"
     
     sender = ELKTON_DOT_CHURCH_GMAIL_USERNAME
-    recipients = TICO_GMAIL_EMAIL
+    recipients = [TICO_GMAIL_EMAIL, TICO2_GMAIL_EMAIL]
     msg = MIMEText(message, 'html')
     msg['Subject'] = 'New EMC Prayer Request'
     msg['From'] = sender
-    msg['To'] = recipients
+    msg['To'] = ", ".join(recipients)
     
     # Send email
     with smtplib.SMTP(smtp_server, port) as server:
