@@ -8,8 +8,19 @@ ADMIN_ELKTON_CHURCH_EMAIL_ADDRESS = os.environ.get('ADMIN_ELKTON_CHURCH_EMAIL_AD
 ELKTON_DOT_CHURCH_GMAIL_USERNAME = os.environ.get('ELKTON_DOT_CHURCH_GMAIL_USERNAME')
 ELKTON_DOT_CHURCH_GMAIL_PASSWORD = os.environ.get('ELKTON_DOT_CHURCH_GMAIL_PASSWORD')
 
+# Pastor's Email
+PASTOR_REGGIE_EMAIL = os.environ.get('PASTOR_REGGIE_EMAIL')
+
+# Deacons' Emails
 TICO_GMAIL_EMAIL = os.environ.get('TICO_GMAIL_EMAIL')
 TICO2_GMAIL_EMAIL = os.environ.get('TICO2_GMAIL_EMAIL')
+DON_FAUPEL_EMAIL = os.environ.get('DON_FAUPEL_EMAIL')
+CASEY_TURNER_EMAIL = os.environ.get('CASEY_TURNER_EMAIL')
+MIKE_VIERS_EMAIL = os.environ.get('MIKE_VIERS_EMAIL')
+
+# Deaconesses' Emails
+
+
 
 
 def send_mail(user, typeOfRequest, prayerRequest):
@@ -20,7 +31,7 @@ def send_mail(user, typeOfRequest, prayerRequest):
     message = f"<div><ul><li>Name: {user}</li></ul></div><div><ul><li>Type of Prayer Request: {typeOfRequest}</li></ul></div><div><ul><li>Details of Prayer Request: {prayerRequest}</li></ul></div>"
     
     sender = ADMIN_ELKTON_CHURCH_EMAIL_ADDRESS
-    recipients = [TICO_GMAIL_EMAIL, TICO2_GMAIL_EMAIL]
+    recipients = [PASTOR_REGGIE_EMAIL, TICO2_GMAIL_EMAIL, DON_FAUPEL_EMAIL, CASEY_TURNER_EMAIL, MIKE_VIERS_EMAIL]
     msg = MIMEText(message, 'html')
     msg['Subject'] = 'New EMC Prayer Request'
     msg['From'] = sender
