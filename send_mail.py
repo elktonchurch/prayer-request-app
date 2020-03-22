@@ -4,6 +4,7 @@ from email.mime.text import MIMEText
 from dotenv import load_dotenv
 load_dotenv()
 
+# Admin Emails
 ADMIN_ELKTON_CHURCH_EMAIL_ADDRESS = os.environ.get('ADMIN_ELKTON_CHURCH_EMAIL_ADDRESS')
 ELKTON_DOT_CHURCH_GMAIL_USERNAME = os.environ.get('ELKTON_DOT_CHURCH_GMAIL_USERNAME')
 ELKTON_DOT_CHURCH_GMAIL_PASSWORD = os.environ.get('ELKTON_DOT_CHURCH_GMAIL_PASSWORD')
