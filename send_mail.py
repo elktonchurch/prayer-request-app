@@ -13,7 +13,7 @@ def send_mail(user, typeOfRequest, prayerRequest):
     smtp_server = 'smtp.gmail.com'
     login = ELKTON_DOT_CHURCH_GMAIL_USERNAME
     password = ELKTON_DOT_CHURCH_GMAIL_PASSWORD
-    message = f"<ul><li>User: {user}</li><li>Type of Prayer Request: {typeOfRequest}</li><li>Prayer Request: {prayerRequest}</li></ul>"
+    message = f"<ul><li>User: {user}</li>\n<li>Type of Prayer Request: {typeOfRequest}</li>\n<li>Prayer Request: {prayerRequest}</li></ul>"
     
     sender = ELKTON_DOT_CHURCH_GMAIL_USERNAME
     recipients = TICO_GMAIL_EMAIL

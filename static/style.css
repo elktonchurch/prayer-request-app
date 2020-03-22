@@ -53,12 +53,17 @@ h1 {
 	color: rgb(181, 15, 25);
 }
 
-h3 {
-	margin-bottom: 15px;
+h2 {
+	margin: 25px;
 }
 
 img {
 	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: blue;
 }
 
 .message {
