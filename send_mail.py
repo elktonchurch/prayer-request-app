@@ -4,13 +4,15 @@ from email.mime.text import MIMEText
 from dotenv import load_dotenv
 load_dotenv()
 
-# Admin Emails
-ADMIN_ELKTON_CHURCH_EMAIL_ADDRESS = os.environ.get('ADMIN_ELKTON_CHURCH_EMAIL_ADDRESS')
+# elkton.church email addresses
+ADMIN_ELKTON_CHURCH_EMAIL = os.environ.get('ADMIN_ELKTON_CHURCH_EMAIL')
+SUPPORT_ELKTON_CHURCH_EMAIL = os.environ.get('SUPPORT_ELKTON_CHURCH_EMAIL')
+
+# elktondotchurch gmail addresses
 ELKTON_DOT_CHURCH_GMAIL_USERNAME = os.environ.get('ELKTON_DOT_CHURCH_GMAIL_USERNAME')
 ELKTON_DOT_CHURCH_GMAIL_PASSWORD = os.environ.get('ELKTON_DOT_CHURCH_GMAIL_PASSWORD')
 
-# Deacons' Emails
-TICO2_GMAIL_EMAIL = os.environ.get('TICO2_GMAIL_EMAIL')
+# Deacons' Email Addresses
 TICO_GMAIL_EMAIL = os.environ.get('TICO_GMAIL_EMAIL')
 
 # Sends out multiple email notifications of a new EMC prayer request
@@ -22,10 +24,10 @@ def send_mail(userFirstName, userLastName, typeOfRequest, prayerRequest):
     message = f"<div><ul><li>Name: {userFirstName} {userLastName}</li></ul></div><div><ul><li>Type of Prayer Request: {typeOfRequest}</li></ul></div><div><ul><li>Details of Prayer Request: {prayerRequest}</li></ul></div>"
     
     # Email account that notifications will be sent from
-    sender = ADMIN_ELKTON_CHURCH_EMAIL_ADDRESS
+    sender = ADMIN_ELKTON_CHURCH_EMAIL
     
     # Church staff that will receive prayer request notifications
-    recipients = [TICO2_GMAIL_EMAIL, TICO_GMAIL_EMAIL]
+    recipients = [TICO_GMAIL_EMAIL, SUPPORT_ELKTON_CHURCH_EMAIL]
     
     
     msg = MIMEText(message, 'html')
