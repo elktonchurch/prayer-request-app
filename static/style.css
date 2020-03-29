@@ -98,6 +98,22 @@ a {
 	margin: 1rem 0;
 }
 
+.name-fields-container {
+	display: flex;
+	flex-direction: rows;
+	justify-content: space-between;
+}
+
+.form-group-first-name {
+	width: 37%;
+	/* margin: 1rem 0; */
+}
+
+.form-group-last-name {
+	width: 57%;
+	/* margin: 1rem 0; */
+}
+
 input[type='text'],
 select,
 option,
