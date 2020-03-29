@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI')
-DATABASE_URL = os.environ.get('DATABASE_URL')
+HEROKU_DATABASE_URI = os.environ.get('HEROKU_DATABASE_URI')
 
 app = Flask(__name__)
 # Talisman(app)
@@ -21,7 +21,7 @@ if ENV == 'dev':
 	app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
 else:
 	app.debug = False
-	app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
+	app.config['SQLALCHEMY_DATABASE_URI'] = HEROKU_DATABASE_URI
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
