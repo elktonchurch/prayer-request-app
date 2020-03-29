@@ -31,17 +31,16 @@ class PrayerRequest(db.Model):
 	__tablename__ = 'prayerRequest'
 	id = db.Column(db.Integer, primary_key=True)
 	userFirstName = db.Column(db.String(200))
- 	userLastName = db.Column(db.String(200))
+	userLastName = db.Column(db.String(200))
 	typeOfRequest = db.Column(db.String(200))
 	prayerRequest = db.Column(db.Text())
-  
+
 	def __init__(self, userFirstName, userLastName, typeOfRequest, prayerRequest):
 		self.userFirstName = userFirstName
-  		self.userLastName = userLastName
+		self.userLastName = userLastName
 		self.typeOfRequest = typeOfRequest
 		self.prayerRequest = prayerRequest
-	
-  
+
 # Route that handles GET requests to the '/' endpoint
 @app.route('/')
 def index():
@@ -52,11 +51,11 @@ def index():
 def submit():
 	if request.method == 'POST':
 		userFirstName = request.form['userFirstName']
-  		userLastName = request.form['userLastName']
+		userLastName = request.form['userLastName']
 		typeOfRequest = request.form['typeOfRequest']
 		prayerRequest = request.form['prayerRequest']
-	if user == '' or typeOfRequest == '' or prayerRequest == '':
-		return render_template('index.html', message='Please fill in all of the required fields, which are denoted by an " * " (asterisk)')
+	if userFirstName == '' or userLastName == '' or typeOfRequest == '' or prayerRequest == '':
+		return render_template('index.html', message='Please fill in ALL the fields & resubmit your form again')
 	# Prevents duplicate prayer request form submissions from the same user 
 	# if db.session.query(PrayerRequest).filter(PrayerRequest.user == user).count() == 0:
 	data = PrayerRequest(userFirstName, userLastName, typeOfRequest, prayerRequest)
