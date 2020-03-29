@@ -41,7 +41,10 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	/* align-items: center; */
+}
+
+.logo_link {
+	width: 50%;
 }
 
 .logo_form_header {
@@ -50,12 +53,17 @@ body {
 	text-align: center;
 }
 
+.form_h1 {
+	width: 50%;
+}
+
 .logo_success_header {
 	width: 40%;
 }
 
 h1 {
-	color: #777;
+	color: rgb(181, 15, 25);
+	font-size: 1.5rem;
 }
 
 .power_of_prayer_h2 {
@@ -132,7 +140,6 @@ textarea {
 	border: none;
 	cursor: pointer;
 	outline: none;
-	/* margin-top: 2rem; */
 }
 
 .btn:hover {
