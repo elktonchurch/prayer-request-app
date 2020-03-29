@@ -20,13 +20,23 @@
 			<p class="message">{{ message | safe }}</p>
 			{% endif %}
 			<form action="/submit" method="POST">
-				<div class="form-group">
-					<label for="firstAndLastName">
-						<h3 id="firstAndLastName">First & Last Name*</h3>
-					</label>
-					<label>
-						<input type="text" name="user" placeholder="i.e. Reginald Courliss" />
-					</label>
+				<div>
+					<div class="form-group">
+						<label for="firstName">
+							<h3 id="firstName">First Name*</h3>
+						</label>
+						<label>
+							<input type="text" name="user-first-name" placeholder="i.e. Reginald" />
+						</label>
+					</div>
+					<div class="form-group">
+						<label for="firstAndLastName">
+							<h3 id="firstAndLastName">First & Last Name*</h3>
+						</label>
+						<label>
+							<input type="text" name="user" placeholder="i.e. Reginald Courliss" />
+						</label>
+					</div>
 				</div>
 				<div class="form-group">
 					<label for="requestType">
