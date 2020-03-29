@@ -27,12 +27,12 @@ PATTY_EVANS_EMAIL = os.environ.get('PATTY_EVANS_EMAIL')
 JEN_VIERS_EMAIL = os.environ.get('JEN_VIERS_EMAIL')
 
 # Sends out multiple email notifications of a new EMC prayer request
-def send_mail(user-first-name, typeOfRequest, prayerRequest):
+def send_mail(userFirstName, typeOfRequest, prayerRequest):
     port = 587
     smtp_server = 'smtp.gmail.com'
     login = ELKTON_DOT_CHURCH_GMAIL_USERNAME
     password = ELKTON_DOT_CHURCH_GMAIL_PASSWORD
-    message = f"<div><ul><li>Name: {user}</li></ul></div><div><ul><li>Type of Prayer Request: {typeOfRequest}</li></ul></div><div><ul><li>Details of Prayer Request: {prayerRequest}</li></ul></div>"
+    message = f"<div><ul><li>Name: {userFirstName}</li></ul></div><div><ul><li>Type of Prayer Request: {typeOfRequest}</li></ul></div><div><ul><li>Details of Prayer Request: {prayerRequest}</li></ul></div>"
     
     # Email account that notifications will be sent from
     sender = ADMIN_ELKTON_CHURCH_EMAIL_ADDRESS
