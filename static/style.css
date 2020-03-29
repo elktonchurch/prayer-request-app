@@ -56,7 +56,6 @@ body {
 
 h1 {
 	color: #777;
-	margin-top: 15px;
 }
 
 .power_of_prayer_h2 {
@@ -106,12 +105,10 @@ a {
 
 .form-group-first-name {
 	width: 37%;
-	/* margin: 1rem 0; */
 }
 
 .form-group-last-name {
 	width: 57%;
-	/* margin: 1rem 0; */
 }
 
 input[type='text'],
