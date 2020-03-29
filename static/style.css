@@ -59,6 +59,10 @@ body {
 
 .form_h1 {
 	width: 65%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
 	text-align: right;
 }
 
