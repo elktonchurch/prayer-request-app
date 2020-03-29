@@ -14,7 +14,7 @@ app = Flask(__name__)
 # Talisman(app)
 CORS(app)
 
-ENV = 'dev'
+ENV = 'prod'
 
 if ENV == 'dev':
 	app.debug = True
@@ -67,4 +67,4 @@ def submit():
 	# return render_template('index.html', message='Thank you, but you have already submitted a prayer request')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
