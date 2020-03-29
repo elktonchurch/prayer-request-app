@@ -140,6 +140,10 @@ textarea {
 	padding-left: 0.6rem;
 }
 
+.required-form-footnote {
+	margin: 1rem 1rem 1rem 0;
+}
+
 .btn {
 	display: block;
 	font-size: 1.5rem;
