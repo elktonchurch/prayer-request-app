@@ -44,6 +44,10 @@ body {
 }
 
 .logo_link {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
 	width: 50%;
 }
 
@@ -54,7 +58,8 @@ body {
 }
 
 .form_h1 {
-	width: 50%;
+	width: 65%;
+	text-align: right;
 }
 
 .logo_success_header {
