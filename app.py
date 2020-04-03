@@ -1,6 +1,6 @@
 import os
 from flask import Flask, render_template, request
-# from flask_talisman import Talisman
+from flask_talisman import Talisman
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from send_mail import send_mail
@@ -11,7 +11,7 @@ SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI')
 DATABASE_URL = os.environ.get('DATABASE_URL')
 
 app = Flask(__name__)
-# Talisman(app)
+Talisman(app)
 CORS(app)
 
 ENV = 'prod'
