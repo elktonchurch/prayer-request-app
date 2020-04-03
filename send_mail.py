@@ -40,21 +40,31 @@ def send_mail(userFirstName, userLastName, typeOfRequest, prayerRequest):
     # Email account that notifications will be sent from
     sender = ADMIN_ELKTON_CHURCH_EMAIL
     
-    # Church staff that will receive prayer request notifications
-    recipients = [
-        PASTOR_REGGIE_EMAIL, 
-        SUE_COURLISS_EMAIL, 
-        TICO_GMAIL_EMAIL, 
-        DON_FAUPEL_EMAIL,
-        CASEY_TURNER_EMAIL, 
-        MIKE_VIERS_EMAIL,
-        MELISSA_HELMUTH_EMAIL,
-        KIM_KARL_EMAIL,
-        KELLEE_ROTH_EMAIL,
-        PATTY_EVANS_EMAIL,
-        JEN_VIERS_EMAIL
-    ]
+    ENV = 'dev'
     
+    if ENV == 'prod':
+        # Church staff that will receive prayer request notifications
+        recipients = [
+            PASTOR_REGGIE_EMAIL, 
+            SUE_COURLISS_EMAIL, 
+            TICO_GMAIL_EMAIL, 
+            DON_FAUPEL_EMAIL,
+            CASEY_TURNER_EMAIL, 
+            MIKE_VIERS_EMAIL,
+            MELISSA_HELMUTH_EMAIL,
+            KIM_KARL_EMAIL,
+            KELLEE_ROTH_EMAIL,
+            PATTY_EVANS_EMAIL,
+            JEN_VIERS_EMAIL
+        ]
+    else:
+        # Church staff that will receive prayer request notifications
+        recipients = [
+            TICO_GMAIL_EMAIL,
+            SUPPORT_ELKTON_CHURCH_EMAIL
+        ]
+    
+
     
     msg = MIMEText(message, 'html')
     msg['Subject'] = 'New EMC Prayer Request'
