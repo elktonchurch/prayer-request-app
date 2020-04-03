@@ -14,7 +14,7 @@ app = Flask(__name__)
 # Talisman(app)
 CORS(app)
 
-ENV = 'dev'
+ENV = 'prod'
 
 if ENV == 'dev':
 	app.debug = True
