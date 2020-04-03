@@ -122,11 +122,11 @@ a {
 }
 
 .form-group-first-name {
-	width: 37%;
+	width: 100%;
 }
 
 .form-group-last-name {
-	width: 57%;
+	width: 100%;
 }
 
 input[type='text'],
@@ -141,7 +141,8 @@ textarea {
 	padding-left: 0.6rem;
 }
 
-select, option {
+select,
+option {
 	height: 2.5rem;
 }
 
